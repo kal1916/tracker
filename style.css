@@ -1,0 +1,193 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #f4f6f8;
+  color: #333;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  color: #2c3e50;
+}
+
+.summary-section {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.summary-card {
+  flex: 1;
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.summary-card h3 {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.summary-card p {
+  font-size: 20px;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.form-section,
+.controls-section,
+.table-section {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+.form-group,
+.control-group {
+  margin-bottom: 12px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #219150;
+}
+
+.error-message {
+  color: #e74c3c;
+  font-size: 14px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.controls-grid {
+  display: flex;
+  gap: 15px;
+}
+
+.controls-grid .control-group {
+  flex: 1;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  font-size: 14px;
+}
+
+th {
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+.delete-btn {
+  background-color: #e74c3c;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: auto;
+  font-size: 12px;
+}
+
+.delete-btn:hover {
+  background-color: #c0392b;
+}
+
+@media (max-width: 600px) {
+  .summary-section,
+  .controls-grid {
+    flex-direction: column;
+  }
+
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  thead tr {
+    display: none;
+  }
+
+  tr {
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+  }
+
+  td {
+    border-bottom: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+  }
+
+  td::before {
+    content: attr(data-label);
+    font-weight: bold;
+  }
+}
